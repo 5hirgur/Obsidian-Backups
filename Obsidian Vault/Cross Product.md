@@ -1,0 +1,1 @@
+A cross product of two vectors is also known as it
