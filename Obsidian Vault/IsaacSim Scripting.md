@@ -138,7 +138,76 @@ xform_api.AddScaleOp().Set(value=Gf.Vec3f(scaling[0], scaling[1], scaling[2]))
 
 
 
+# Example Uses
 
+## Spawning an object 
+The following script spawns set of boxes on a pallet in IsaacSim, The boxes are tightly packed together. 
 
+![[Pasted image 20250416145726.png#center]]
+
+```python 
+import omni.usd
+from pxr import Usd, UsdGeom, Gf
+import os
+def spawn_multiple_objects(asset_name, parent_path="/World/PickAssets/Final_Row/Box_2_Assets/Pallet_Box_2"):
+    stage = omni.usd.get_context().get_stage()  # Get the current stage
+    # Dimensions of the boxes
+    box_x = 36  # Box width (x direction)
+    box_y = 20  # Box depth (y direction)
+    box_z = 14	  # Box height (z direction)
+    # Pallet dimensions (world coordinates)
+    pallet_x_min = 325
+    pallet_x_max = 480
+    pallet_y_min = -83
+    pallet_y_max = 90
+    pallet_z_height = 22  # Height of the pallet
+    # Layer count (3 layers of boxes)
+    layers = 3
+    # Calculate the number of boxes that fit along each axis
+    num_boxes_x = (pallet_x_max - pallet_x_min) // box_x
+    num_boxes_y = (pallet_y_max - pallet_y_min) // box_y
+    # Create a list to store positions
+    positions = []
+    # Loop through the x, y, and z axes to calculate the positions
+    for layer in range(layers):
+        for x_idx in range(num_boxes_x):
+            for y_idx in range(num_boxes_y):
+                # Calculate the x and y positions based on the index and box dimensions
+                x_position = pallet_x_min + (x_idx * box_x)  # Center the box in the x-direction
+                y_position = pallet_y_min + (y_idx * box_y)  # Center the box in the y-direction
+                # Calculate the z position for each layer
+                z_position = pallet_z_height + (layer * box_z)  # Stack boxes with a height offset
+                # Define the position in world coordinates
+                position = Gf.Vec3d(x_position, y_position, z_position)
+                positions.append(position)
+    # Get the user's home directory dynamically
+    user_home_dir = os.environ.get('HOME')  # This will get the home directory of the current user
+    # Asset and scene directories relative to the user's home directory
+    scene_directory = os.path.join(user_home_dir, "kinisi/kinisi_ros/ros/kinisi_isaac/assets/environments")
+    asset_directory = os.path.join(user_home_dir, "kinisi/kinisi_ros/ros/kinisi_isaac/props/cybership")
+    # Compute the relative path from the scene directory to the asset directory
+    asset_path = os.path.relpath(os.path.join(asset_directory, asset_name), scene_directory)
+    # Ensure the asset exists relative to the assets directory
+    if not os.path.exists(os.path.join(scene_directory, asset_path)):
+        print(f"Error: Asset file {os.path.join(scene_directory, asset_path)} does not exist.")
+        return
+    # Now spawn the boxes at the calculated positions
+    for i, position in enumerate(positions):
+        prim_path = f"{parent_path}/box_{i}"
+        # Create a new Xform (transform) prim for the object at the specified prim path
+        prim = stage.DefinePrim(prim_path, "Xform")
+        # Load the asset (e.g., a box) into the scene using the relative asset path
+        asset_reference = prim.GetReferences().AddReference(asset_path)
+        # Create a transformation for the object to position it in the scene
+        xform_api = UsdGeom.Xformable(prim)
+        # Clear any existing transformations
+        xform_api.ClearXformOpOrder()
+        # Add a translation operation to the xform
+        xform_api.AddTranslateOp().Set(value=Gf.Vec3d(position[0], position[1], position[2]))
+        print(f"Spawning box at {position}")  # For debugging
+# Example usage:
+# Specify the asset name for the box and spawn boxes on the pallet
+spawn_multiple_objects("box_2.usda")  # Adjust the asset name to match the relative path
+```
 
 
