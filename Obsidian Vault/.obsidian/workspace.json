@@ -8,46 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "01bfa85c59a4b76a",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "6f470263b9d385ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docker Basics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Docker Basics"
-            }
-          },
-          {
             "id": "05545bf248f3444c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Isaac Sim.md",
+                "file": "Gears.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,7 +28,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Isaac Sim"
+              "title": "Gears"
+            }
+          },
+          {
+            "id": "29878473dc56b235",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux Commands.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Linux Commands"
+            }
+          },
+          {
+            "id": "4aef1cf196cf1ee9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IsaacSim Scripting.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "IsaacSim Scripting"
             }
           }
         ],
@@ -98,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#RRTM",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,13 +197,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Isaac Sim.md",
+                "file": "IsaacSim Scripting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Isaac Sim"
+              "title": "Outline of IsaacSim Scripting"
             }
           },
           {
@@ -217,7 +231,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 381.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,18 +244,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "05545bf248f3444c",
+  "active": "4aef1cf196cf1ee9",
   "lastOpenFiles": [
+    "Gears.md",
+    "Kinematics/Kinematic Parameters.md",
+    "Kinematics/Differential Relations.md",
+    "IsaacSim Scripting.md",
+    "Isaac Sim.md",
+    "Setting up a ROS 2 DevContainer for Development.md",
+    "Here.md",
+    "Linux Commands.md",
+    "Docker Basics.md",
+    "RRTM/RRTM Seminars/Neurorobotics and Neuroprosthetics.md",
+    "RRTM/RRTM Seminars/Morphological Computation.md",
     "Assets/Attachments/Pasted image 20250217172158.png",
     "Assets/Attachments/Pasted image 20250217171026.png",
     "Assets/Attachments/Pasted image 20250217170759.png",
-    "Isaac Sim.md",
-    "Docker Basics.md",
     "Pixel Transformations.md",
     "Image Processing.md",
     "Kinematics/Inverse Kinematics.md",
     "Kinematics/Forward Kinematics.md",
-    "Kinematics/Kinematic Parameters.md",
     "Assets/Attachments/Pasted image 20250209132344.png",
     "Assets/Attachments/Pasted image 20250209131631.png",
     "Assets/Attachments/Pasted image 20250209131627.png",
@@ -251,23 +273,15 @@
     "Assets/Attachments/Pasted image 20250204154707.png",
     "NumPy.md",
     "MatPlotLib.md",
-    "Assets/Attachments/Pasted image 20250122155740.png",
     "RRTM Final Assignment (Pre- Latex).md",
     "Robotics Systems Group Assignment.md",
     "Kinematics/Denavit Hartenberg Algorithm.md",
-    "Kinematics/Differential Relations.md",
     "Kinematics/Homogeneous Transformations.md",
     "Kinematics/Rudimentary Robotic Architectures and DoFs.md",
     "Kinematics/Basic Coordinate Transformations.md",
     "orthonormal.md",
     "orthogonal.md",
     "Linear Algebra.md",
-    "Collision Free Human Robot Collaboration Based on Context Awareness.md",
-    "RRTM/RRTM Reading Group 3/Presentation Summaries/Neural Architecture Search for Spiking Neural Networks.md",
-    "RRTM/RRTM Reading Group 3/Presentation Summaries/Deployable Soft Origami Modular Robotic Arm With Variable Stiffness Using Facet Buckling.md",
-    "Entrepreneurship and Robotics.md",
-    "RRTM/RRTM Seminars/Soft Robotics For Simpler Robots.md",
-    "RRTM/RRTM Reading Group 3/Presentation Summaries/Towards Autonomous UAV Railway DC Line Recharging - Design and Simulation.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "RRTM/RRTM Reading Group 3/Self-Read Paper Summaries",
