@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IsaacSim Scripting.md",
+                "file": "IsaacSim/IsaacSim Scripting.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -197,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IsaacSim Scripting.md",
+                "file": "IsaacSim/IsaacSim Scripting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -246,12 +246,13 @@
   },
   "active": "4aef1cf196cf1ee9",
   "lastOpenFiles": [
+    "IsaacSim/Isaac Sim.md",
+    "IsaacSim/IsaacSim Scripting.md",
+    "IsaacSim",
     "Assets/Attachments/Pasted image 20250416145726.png",
     "Gears.md",
     "Kinematics/Kinematic Parameters.md",
     "Kinematics/Differential Relations.md",
-    "IsaacSim Scripting.md",
-    "Isaac Sim.md",
     "Setting up a ROS 2 DevContainer for Development.md",
     "Here.md",
     "Linux Commands.md",
@@ -271,7 +272,6 @@
     "Assets/Attachments/Pasted image 20250204184905.png",
     "Assets/Attachments/Pasted image 20250204184830.png",
     "Assets/Attachments/Pasted image 20250204184204.png",
-    "Assets/Attachments/Pasted image 20250204154707.png",
     "NumPy.md",
     "MatPlotLib.md",
     "RRTM Final Assignment (Pre- Latex).md",
@@ -292,7 +292,6 @@
     "Assets/Attachments/Linear Algebra Notes.pdf",
     "Forward Kinematics",
     "Assets/Attachments",
-    "Assets",
-    "Kinematics"
+    "Assets"
   ]
 }
